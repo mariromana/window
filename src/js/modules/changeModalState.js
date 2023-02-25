@@ -1,5 +1,6 @@
 import checkNumInputs from "./checkNumINputs";
 
+
 const changeModalState = (state) => {
     const windowForm = document.querySelectorAll('.balcon_icons_img'),
         windowWidth = document.querySelectorAll('#width'),
@@ -9,6 +10,9 @@ const changeModalState = (state) => {
 
        checkNumInputs('#width');
        checkNumInputs('#height');
+ 
+
+
 
 
        function bindActionToElems(event, elem, prop) {
@@ -18,6 +22,7 @@ const changeModalState = (state) => {
                 switch(item.nodeName) {
                     case "SPAN" :
                         state[prop] = i;
+                        
                         break;
                     case "INPUT" :
                         if(item.getAttribute('type') === 'checkbox') {
